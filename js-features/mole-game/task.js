@@ -9,14 +9,14 @@ for (let i = 1; i < 10; i++) {
             document.getElementById('dead').textContent = successShot;
             if (successShot === 10) {
                 alert('Вы победили!');
-                return location.reload();
+                return successShot = 0, bossShot = 0;
             }
         } else {
             bossShot += 1;
             document.getElementById('lost').textContent = bossShot;
             if (bossShot === 5) {
                 alert('Поражение((');
-                return location.reload();
+                return successShot = 0, bossShot = 0;
             }
         }
     }  
