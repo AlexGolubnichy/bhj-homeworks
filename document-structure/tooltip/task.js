@@ -1,15 +1,11 @@
 const elementHasHint = document.querySelectorAll('.has-tooltip');
 
-const hintRemuval = () => {
+elementHasHint.forEach(element => element.addEventListener('click', (ev) => {
     if (document.querySelector('.tooltip_active')) {
         document.querySelector('.tooltip_active').remove();
         return;
     }
-}
-
-elementHasHint.forEach(element => element.addEventListener('click', (ev) => {
     ev.preventDefault();
-    hintRemuval();
     const location = {left, bottom} = ev.target.getBoundingClientRect();
     console.log(location);
     ev.target.insertAdjacentHTML("afterEnd", 
