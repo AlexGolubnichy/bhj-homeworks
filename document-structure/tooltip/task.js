@@ -3,6 +3,7 @@ const elementHasHint = document.querySelectorAll('.has-tooltip');
 const hintRemuval = () => {
     if (document.querySelector('.tooltip_active')) {
         document.querySelector('.tooltip_active').remove();
+        return;
     }
 }
 

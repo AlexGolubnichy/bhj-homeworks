@@ -3,6 +3,9 @@ const inputTaskField = document.getElementById('task__input');
 const taskList =  document.getElementById('tasks__list');
 
 function addTask(){
+
+    inputTaskField.value = inputTaskField.value.trim();
+
     if (inputTaskField.value) {
         taskList.insertAdjacentHTML('beforeEnd', 
             `<div class="task"> 
@@ -15,11 +18,6 @@ function addTask(){
     inputTaskField.value = null;
 }
 
-inputTaskField.addEventListener('keyup', (ev) => {
-    if (ev.key === 'Enter') {
-        addTask;
-    }
-})
 addTaskButton.addEventListener('click', (ev) => {
     ev.preventDefault();
     addTask();
